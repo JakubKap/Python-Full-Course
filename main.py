@@ -3,6 +3,8 @@ import os.path
 from datetime import datetime
 from urllib import request
 
+import requests
+
 import calculator
 from joke import Joke
 from phone import Phone
@@ -66,10 +68,10 @@ print(response.read())
 # Fetching jokes from API
 print("\nFetching jokes from API:")
 url = "http://official-joke-api.appspot.com/random_ten"
-response = request.urlopen(url)
-print(response.getcode())
-data = response.read()
-jsonData = json.loads(data)
+r = request.urlopen(url)
+print(r.getcode())
+response = requests.get(url)
+jsonData = json.loads(response.text)
 print(jsonData)
 
 jokes = []

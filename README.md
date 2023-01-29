@@ -9,4 +9,5 @@ Basic app contains (with division of modules):
 * Date operations (including formatting),
 * Files operations,
 * Fetching data from Internet,
-* Fetching data from API (with JSON).
+* Fetching data from API (with JSON),
+* Installing and using Requests module with pip.
