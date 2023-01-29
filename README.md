@@ -8,4 +8,5 @@ Basic app contains (with division of modules):
 * Class with defined operations,
 * Date operations (including formatting),
 * Files operations,
-* Fetching data from Internet.
+* Fetching data from Internet,
+* Fetching data from API (with JSON).

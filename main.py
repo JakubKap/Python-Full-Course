@@ -1,8 +1,10 @@
+import json
 import os.path
 from datetime import datetime
 from urllib import request
 
 import calculator
+from joke import Joke
 from phone import Phone
 
 # calculator operations
@@ -56,6 +58,27 @@ else:
     print(f"File {filename} does not exist")
 
 # Fetching data from Internet
+print("\nFetching data from Internet:")
 response = request.urlopen("http://www.google.com")
 print(response.getcode())
 print(response.read())
+
+# Fetching jokes from API
+print("\nFetching jokes from API:")
+url = "http://official-joke-api.appspot.com/random_ten"
+response = request.urlopen(url)
+print(response.getcode())
+data = response.read()
+jsonData = json.loads(data)
+print(jsonData)
+
+jokes = []
+for j in jsonData:
+    setup = j["setup"]
+    punchline = j["punchline"]
+    joke = Joke(setup, punchline)
+    jokes.append(joke)
+
+print(f"\nGot {len(jokes)} jokes:")
+for joke in jokes:
+    print(joke)
