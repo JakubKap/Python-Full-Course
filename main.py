@@ -13,10 +13,5 @@ iphone = Phone("IPhone 7+", 300)
 samsung = Phone("Samsung S20", 1400)
 
 print("\nPhone creations results:")
-print(iphone.brand)
-print(iphone.price)
-iphone.call("999")
-
-print("\n" + samsung.brand)
-print(samsung.price)
-iphone.call("990")
+print(iphone)
+print(samsung)
