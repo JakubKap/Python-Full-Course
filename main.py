@@ -1,3 +1,4 @@
+import os.path
 from datetime import datetime
 
 import calculator
@@ -34,8 +35,21 @@ print(now.strftime("%d-%B-%Y %H:%M:%S"))
 print(now.strftime("%d-%b-%Y %H:%M:%S"))
 
 # File operations (w - writing, a - appending, r+ - reading and writing)
-file = open("./date.csv", "r+")
+filename = "./data.csv"
+file = open(filename, "w")
 file.write("id, name, email\n")
 file.write("1, Jakub, jk@gmail.com\n")
 file.write("2, John, john@gmail.com\n")
 file.close()
+
+print("\nFile content:")
+file = open(filename, "r")
+for line in file:
+    print(line)
+file.close()
+
+if os.path.isfile(filename):
+    with open(filename, "r") as file:
+        print(file.read())
+else:
+    print(f"File {filename} does not exist")
