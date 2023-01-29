@@ -2,7 +2,8 @@
 
 Files created while learning Python from a YouTube tutorial (https://www.youtube.com/watch?v=LzYNWme1W6Q&t=125s)
 
-Basic app contains:
+Basic app contains (with division of modules):
 
-* Separate module defining calculator operations,
-* Class with defined operations, 
+* Calculator operations,
+* Class with defined operations,
+* Date operations.
