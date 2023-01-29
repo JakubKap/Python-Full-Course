@@ -6,4 +6,4 @@ Basic app contains (with division of modules):
 
 * Calculator operations,
 * Class with defined operations,
-* Date operations.
+* Date operations (including formatting).

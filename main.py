@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 import calculator
 from phone import Phone
@@ -20,8 +20,15 @@ print(samsung)
 
 # Working with dates
 print("\nDates examples:")
-print(datetime.datetime.now())
-print(datetime.datetime.now().year)
-print(datetime.datetime.now().month)
-print(datetime.datetime.now().day)
-print(datetime.date.today())
+now = datetime.now()
+print(now)
+print(now.year)
+print(now.month)
+print(now.day)
+
+# Date formatting
+print("\nFormatted date:")
+print(now.strftime("%d/%m/%Y %H:%M:%S"))
+print(now.strftime("%d-%m-%Y %H:%M:%S"))
+print(now.strftime("%d-%B-%Y %H:%M:%S"))
+print(now.strftime("%d-%b-%Y %H:%M:%S"))
