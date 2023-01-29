@@ -10,4 +10,5 @@ Basic app contains (with division of modules):
 * Files operations,
 * Fetching data from Internet,
 * Fetching data from API (with JSON),
-* Installing and using Requests module with pip.
+* Installing and using Requests module with pip,
+* Reading fetched data with text to speech.

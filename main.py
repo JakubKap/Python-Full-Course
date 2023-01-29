@@ -3,6 +3,7 @@ import os.path
 from datetime import datetime
 from urllib import request
 
+import pyttsx3
 import requests
 
 import calculator
@@ -84,3 +85,7 @@ for j in jsonData:
 print(f"\nGot {len(jokes)} jokes:")
 for joke in jokes:
     print(joke)
+    pyttsx3.speak("Setup")
+    pyttsx3.speak(joke.setup)
+    pyttsx3.speak("Punchline")
+    pyttsx3.speak(joke.punchline)
