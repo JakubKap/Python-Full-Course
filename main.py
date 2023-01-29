@@ -1,5 +1,6 @@
 import os.path
 from datetime import datetime
+from urllib import request
 
 import calculator
 from phone import Phone
@@ -53,3 +54,8 @@ if os.path.isfile(filename):
         print(file.read())
 else:
     print(f"File {filename} does not exist")
+
+# Fetching data from Internet
+response = request.urlopen("http://www.google.com")
+print(response.getcode())
+print(response.read())
